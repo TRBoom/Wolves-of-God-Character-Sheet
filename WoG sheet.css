@@ -1,0 +1,62 @@
+.charsheet{
+    font-family:Optima;
+    font-size:20px;
+    }
+    
+td {
+    width: 80px;
+    margin: 5px;
+    border:2px solid;
+    }
+
+select {
+    width: 70px;
+    font-size:15px;
+    }   
+
+ 
+  .sheet-white{
+     background-color: White;
+ } 
+.sheet-skilltable td {
+    width: 120px;
+    }
+
+.sheet-weapontable select {
+    width: 90px;
+    }
+
+.sheet-weaponname {
+    width:70px;
+    }
+    
+.sheet-weaponAmmo {
+    width:50px;
+    }
+    
+.sheet-narrow{
+    width: 80px;
+    }
+    
+.sheet-standard{
+    width: 110px;
+    }
+.sheet-wide{
+    width: 240px;
+    }
+    
+.sheet-verynarrow{
+    width: 40px;
+    }
+.sheet-halfgrid{
+    display:grid;grid:auto/1fr 1fr;grid-gap:5px
+    
+} 
+textarea {
+  resize: none;
+  font-size:18px;
+}
+input {
+    font-size:20px;
+}
+

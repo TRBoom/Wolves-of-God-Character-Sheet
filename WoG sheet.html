@@ -1,0 +1,931 @@
+<div class="sheet-1colrow sheet-white">
+<div class="sheet-col">
+ 
+
+
+<table style="border:2px solid;width:835px" >
+<tr><td colspan=7>Made by /u/TRBoom | Original Design by /u/Adduly</td><td style="border:2px solid;text-align:center"><strong>Common Dice Rolls</strong></td>    
+<tr><td rowspan=3 colspan=3 style="border:2px solid;text-align:center;"><h1>Wolves of God Character Sheet</h1></td>
+<td style="border-right:none;font-size:15px"><strong>Player Name</strong></td>
+<td style="border-left:none;"><input name="attr_realname" type="text" class="sheet-standard" /></td>
+<td style="border-right:none;font-size:15px"><strong>Hero Name</strong></td>
+<td style="border-left:none;"><input name="attr_name" type="text" class="sheet-standard" /></td>
+
+<td rowspan=3>
+<table style=";height: 180px">
+<tr>
+<td align=right><strong>Initiative</strong></td>
+<td><button type="roll" value="/roll 1d8+[[@{dexterity_mod}]] &{tracker}" class="sheet-verynarrow"></button></td><td></td><td></td>     
+</tr>    
+<tr>
+<td align=center><strong>Skill</strong></td>
+<td>
+<select name="attr_genLevel">
+        <option value="@{connectLevel}">Connect</option>
+        <option value="@{craftLevel}">Craft</option>
+        <option value="@{exertLevel}">Exert</option>
+        <option value="@{giftLevel}">Gift</option>
+        <option value="@{healLevel}">Heal</option>
+        <option value="@{huntLevel}">Hunt</option>
+        <option value="@{kenLevel}">Ken</option>
+        <option value="@{leadLevel}">Lead</option>
+        <option value="@{noticeLevel}">Notice</option>
+        <option value="@{performLevel}">Perform</option>
+        <option value="@{prayLevel}">Pray</option>
+        <option value="@{reeveLevel}">Reeve</option>
+        <option value="@{rideLevel}">Ride</option>
+        <option value="@{shootLevel}">Shoot</option>
+        <option value="@{smiteLevel}">Smite</option>
+        <option value="@{sneakLevel}">Sneak</option>
+        <option value="@{spearLevel}">Spear</option>
+        <option value="@{talkLevel}">Talk</option>
+        <option value="@{toilLevel}">Toil</option>
+        <option value="@{magicLevel}">Magic</option>
+        </select>
+        </td><td></td><td></td>     
+    
+</tr>
+
+<tr>
+<td align=right><strong>Attribute</strong></td>
+<td>
+    <select name="attr_genAttribute">
+        <option value="@{strength_mod}">STR</option>
+        <option value="@{intelligence_mod}">INT</option>
+        <option value="@{wisdom_mod}">WIS</option>
+        <option value="@{dexterity_mod}">DEX</option>
+        <option value="@{constitution_mod}">CON</option>
+        <option value="@{charisma_mod}">CHA</option>
+        </select>
+        </td><td></td></td><td></td> 
+
+</td>    
+    
+    
+</tr>
+
+<tr>
+<td><strong>Dice ?d6</strong></td><td>
+    <select class="sheet-narrow" name="attr_genDice">
+        <option value="2d6">2d6</option>
+        <option value="3d6d1">3d6</option>
+        <option value="4d6d2">4d6</option>
+        <option value="5d6d3">5d6</option>
+        </select></td><td align=right>Skill Check</td>
+<td><button type="roll" value="/em :@{name} makes an Skill check! \n\n/roll @{genDice} + [[@{genAttribute} + @{genLevel}]]"></button></td>    
+    
+</tr>
+    
+    
+
+
+    
+</table>
+</td>
+
+
+</tr>
+<tr><td style="border-right:none;font-size:15px;"><strong>Hero Class</strong></td>
+<td style="border-left:none"><input name="attr_class" type="text" class="sheet-standard"/></td>
+<td style="border-right:none;font-size:15px;"><strong>Hero Epithet</strong></td>
+<td style="border-left:none"><input name="attr_epithet" type="text" class="sheet-standard"/></td>
+
+
+
+</tr>
+<tr><td style="border-right:none;font-size:15px;"><strong>Background</strong></td>
+<td style="border-left:none"><input name="attr_background" type="text" class="sheet-standard" /></td>
+<td style="border-right:none;font-size:15px;"><strong>Hero Nationality</strong></td>
+<td style="border-left:none"><input name="attr_nation" type="text" class="sheet-standard"/></td>
+
+</tr>
+ 
+
+</tr>
+</table>
+</td>
+</tr>
+<table style="border:2px solid;"> 
+<tr >  
+<td valign="top" >
+<table  style="border:2px solid; width: 200px;height: 910px" >
+    <tr style="border:2px solid;"><td colspan=2 style="text-align:center;"><h2>Attributes</h2></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td ></td><td><strong>Strength</strong></td></tr>
+    <tr><td>Mod</td><td><input style="font-size:30px"  type="number" name="attr_strength_mod"  value=0 /></td></tr>
+    <tr><td>Score</td><td><input  style="font-size:30px" type="number" name="attr_strength" value="10"/></td></tr>
+    </table></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td></td><td><strong>Dexterity</strong></td></tr>
+    <tr><td>Mod</td><td><input  style="font-size:30px" type="number" name="attr_dexterity_mod" value=0 /></td></tr>
+    <tr><td>Score</td><td><input  style="font-size:30px" type="number" name="attr_dexterity" value="10"/></td></tr>
+    </table></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td></td><td><strong>Constitution</strong></td></tr>
+    <tr><td>Mod</td><td><input  style="font-size:30px" type="number" name="attr_constitution_mod"   value=0 /></td></tr>
+    <tr><td>Score</td><td><input style="font-size:30px"  type="number" name="attr_constitution" value="10"/></td></tr>
+    </table></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td></td><td><strong>Intelligence</strong></td></tr>
+    <tr><td >Mod</td><td><input  style="font-size:30px" type="number" name="attr_intelligence_mod"  value=0  /></td></tr>
+    <tr><td>Score</td><td><input  style="font-size:30px" type="number" name="attr_intelligence" value="10"/></td></tr>
+    </table></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td></td><td><strong>Wisdom</strong></td></tr>
+    <tr><td>Mod</td><td><input  style="font-size:30px" type="number" name="attr_wisdom_mod"   value=0 /></td></tr>
+    <tr><td>Score</td><td><input  style="font-size:30px" type="number" name="attr_wisdom" value="10"/></td></tr>
+    </table></td></tr>
+    
+    <tr><td align=center colspan=2 style="padding: 5px;"><table  style="border:2px solid;">
+    <tr><td></td><td><strong>Charisma</strong></td></tr>
+    <tr><td>Mod</td><td><input  style="font-size:30px" type="number" name="attr_charisma_mod"  value=0 /></td></tr>
+    <tr><td>Score</td><td><input  style="font-size:30px" type="number" name="attr_charisma" value="10"/></td></tr>
+    </table></td></tr>
+    
+    
+</table>
+</td>
+<td><table style="border:2px solid; width: 200px;height: 910px">
+    <tr><td colspan=2 style="text-align:center "><h2>Skills (Pg. 12)</h2></td></tr>
+        <tr>
+        <td align=right style="border:2px solid;"><h3>Skill</h3></td>
+        <td style="border:2px solid;"><h3>Level</h3></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Connect</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_connectLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Craft</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_craftLevel" value="-1"/></td>
+        </tr>
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Exert</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_exertLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Gift</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number"  name="attr_giftLevel" value="-1"/></td>
+        </tr>
+    
+        <tr>
+        <td align=right style="border:2px solid;"><Strong>Heal</Strong> </td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_healLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Hunt</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_huntLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Ken</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_kenLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Lead</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_leadLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Notice</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_NoticeLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Perform</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_performLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Pray</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_prayLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Reeve</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_reeveLevel" value="-1"/></td>
+        </tr>
+        
+        <tr >
+        <td align=right style="border:2px solid;"><strong>Ride</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px" type="number" name="attr_rideLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Shoot</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_shootLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Smite</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_smiteLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Sneak</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_sneakLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Spear</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_spearLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Talk</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_talkLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Toil</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_toilLevel" value="-1"/></td>
+        </tr>
+        
+        <tr>
+        <td align=right style="border:2px solid;"><strong>Magic</strong></td>
+        <td style="border:2px solid;"><input style="font-size:20px"  type="number" name="attr_magicLevel" value="-1"/></td>
+        </tr>
+        
+    </table>
+</td>
+
+<td style="border:2px solid; width: 427px;">
+    <table style="border:2px solid; width: 430px;height: 910px">
+    <tr><td colspan=4 style="text-align:center;border:2px solid;" ><h2>Resilience</h2></td></tr>
+    <tr><td colspan=4 style="text-align:center;border:2px solid;" ><h3>Hit Points (Pg. 79)</h3></td></tr>
+    <tr><td colspan=2 style="text-align:center;border:2px solid;" ><h3>Remaining Hit Points</h3></td>
+    <td colspan=2 style="text-align:center;border:2px solid;" ><h3>Total Hit Points</h3></td></tr>
+    <tr><td style="border:2px solid;text-align:center;" colspan=2><input style="text-align:center;font-size:30px" type="number" name="attr_hitpoints"></td>
+    <td style="border:2px solid;text-align:center;" colspan=2><input style="text-align:center;font-size:30px" type="number" name="attr_hitpointsMax"></td></tr>   
+    <tr><td colspan=4 style="text-align:center;border:2px solid;" ><h3>Saves (Pg. 44)</h3></td></tr>
+    <tr><td colspan=1 rowspan=2 style="text-align:center;border:2px solid;"><h3>Saving Throws</h3>
+    <td rowspan=2>Bonus<input style="text-align:center;font-size:12px;" type="number" value=0 name="attr_savbonus"></td>
+    </td>
+    <td colspan=2  style="text-align:center;border:2px solid;">
+        <h3>Armor (Pg. 118)</h3>
+    </td>    
+    </tr>
+    <tr> 
+    <td style="text-align:center;border:2px solid;" ><h3>Total Armor:</h3></td>
+    <td><input style="text-align:center;font-size:20px" type="number" name="attr_AC" value=10></td>
+    </tr>
+    <tr>
+        <td style="text-align:center;border:2px solid;">Physical</td>
+        <td style="text-align:center;border:2px solid;"><button type="roll" value="/roll 1d20>[[16-[[{@{strength_mod}, @{constitution_mod}}kh1+@{level}+@{savbonus}]]]]"></button></td>
+        <td style="text-align:center;border:2px solid;">Shield</td>
+        <td style="text-align:center;border:2px solid;"><input style="text-align:center;font-size:20px" type="number" value=0 name="attr_shield"></td></td>
+    </tr>
+    <tr>
+        <td style="text-align:center;border:2px solid;">Mental</td>
+        <td style="text-align:center;border:2px solid;"><button type="roll" value="/roll 1d20>[[16-[[{@{wisdom_mod}, @{charisma_mod}}kh1+@{level}+@{savbonus}]]]]"></button></td>
+        <td style="text-align:center;border:2px solid;">Chest</td>
+        <td style="text-align:center;border:2px solid;"><input style="text-align:center;font-size:20px" type="number" value=0 name="attr_Chest"></td></td>
+    </tr>        
+    <tr>
+        <td style="text-align:center;border:2px solid;">Evasion</td>
+        <td style="text-align:center;border:2px solid;"><button type="roll" value="/roll 1d20>[[16-[[{@{intelligence_mod}, @{dexterity_mod}}kh1+@{level}+@{savbonus}]]]]"></button></td>
+        <td style="text-align:center;border:2px solid;">Other</td>
+        <td style="text-align:center;border:2px solid;"><input style="text-align:center;font-size:20px" type="number" value=0 name="attr_other"></td></td>
+    </tr>        
+    <tr><td colspan=4 style="text-align:center;border:2px solid;" ><h2>Glory & Shame</h2></td></tr>
+    <tr> 
+    <td style="text-align:center;border:2px solid;" ><h3>Count of Glories:</h3></td>
+    <td><input style="text-align:center;font-size:20px" type="number" value=0 name="attr_glories"></td>
+    <td style="text-align:center;border:2px solid;" ><h3>Count of Shames:</h3></td>
+    <td><input style="text-align:center;font-size:20px" type="number" value=0 name="attr_shames"></td>
+    </tr>
+    <tr>
+    <td colspan=2 style="text-align:center;border:2px solid;" ><h3>Total Reputation</h3> (glories-shames)</td>
+    <td  colspan=2 style="text-align:center;border:2px solid;"> <input style="text-align:center;font-size:20px" type="number" value="[[@{glories}-@{shames}]]" name="attr_rep" disabled="true"></td>
+    
+    </tr>
+    <tr>
+    <td colspan=2 style="text-align:center;border:2px solid;" ><h3>Character Level</h3> (pg. 78)</td>
+    <td  colspan=2 style="text-align:center;border:2px solid;"><input style="text-align:center;font-size:20px" type="number" value=1 name="attr_level" ></td>
+    
+    </tr>
+    <tr><td colspan=4 style="text-align:center;border:2px solid;" >
+        <h3>Glories and Shames</h3>
+        </td>
+        </tr>
+        <tr>
+        <td colspan=4 style="text-align:center;border:2px solid;">
+        <textarea style=" width: 400px;height:280px;resize:none;" name="attr_past">Glories & Shames</textarea>
+    </td></tr>
+    </table>
+    
+    
+    
+</td>
+</tr>
+
+<tr>
+<td>
+<table style="border:2px solid;width: 200px;height:301px">
+    <tr><td style="text-align:center;border:2px solid;" colspan=2><h3>Languages (Pg. 40)</h3></td></tr>
+    <tr><td style="text-align:center;border:2px solid;"><strong>Speak</strong></td>
+    <td style="text-align:center;border:2px solid;"><strong>Read & Write</strong></td></tr>
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak1" value="English"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read1"/></td>
+    </tr>
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak2"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read2"/></td>
+    </tr>  
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak3"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read3"/></td>
+    </tr>  
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak4"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read4"/></td>
+    </tr>  
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak5"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read5"/></td>
+    </tr>  
+    <tr>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_speak6"/></td>
+    <td style="text-align:center;border:2px solid;"><input style="width: 80px;font-size:20px"type="text" name="attr_read6"/></td>
+    </tr>  
+</table>
+        
+        
+        
+        
+        
+        
+</td>
+<td colspan=2>
+<table style="border:2px solid;width:631px;height:301px;text-align:center;">
+
+<tr>
+<td colspan=4 style="border:2px solid;text-align:center;">
+ <h2>Wyrds (pg. 32)</h2>            
+</td>
+</tr>
+ 
+<tr>
+<td colspan=2 style="border:2px solid;text-align:center;">Noble Wyrds</td>
+<td colspan=2 style="border:2px solid;text-align:center;">Ignoble Wyrds</td>
+</tr>
+
+<tr>
+<td colspan=2 style="text-align:center;border:2px solid;">
+<textarea style=" width: 250px;height:170px;resize:none;font-size:20px" name="attr_noble">Noble Wyrds</textarea></td>    
+    
+<td colspan=2 style="text-align:center;border:2px solid;">
+<textarea style=" width: 250px;height:170px;resize:none;font-size:20px" name="attr_ignoble">Ignoble Wyrds</textarea></td>     
+</tr>
+</table>
+</td>
+</tr>
+</table> 
+</div>
+</div>
+
+
+<div class="sheet-1colrow sheet-white">
+<div class="sheet-col">
+    
+<div style="text-align:center;border:2px solid;width:831px"><h2>Combat</h2>
+Hit Bonus<input style="text-align:center;font-size:20px" type="number" value=0 name="attr_attackbonus">
+Health<input style="text-align:center;font-size:20px" type="number" name="attr_hitpoints">
+<input style="text-align:center;font-size:20px" type="number"  name="attr_git" value=@{hitpointsMax} disabled="true">
+AC<input style="text-align:center;font-size:20px" type="number" name="attr_git2" value=@{AC} disabled="true"></td></div>
+    <table style="text-align:center;border:2px solid;width:835px">
+    <tr>
+    <td style="border:2px solid;"><strong>Weapon Name</strong></td>
+    <td style="border:2px solid;"><strong>Damage</strong></td>
+    <td style="border:2px solid;"><strong>Skill</strong></td>
+    <td style="border:2px solid;"><strong>Attribute</strong></td>
+    <td colspan=2 style="border:2px solid;"><strong>Shock</strong></td>
+    <td style="border:2px solid;"><strong>Roll</strong></td></tr>
+    <tr style="border:2px solid;">
+    <td  style="border:2px solid;"><input  name="attr_weaponName1" type="text" class="sheet-wide"/></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnDmg1" class="sheet-narrow" /></td>
+    <td  style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus1">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td  style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS1">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnshock1"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC1"class="sheet-verynarrow"></input></td>
+    <td  style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName1}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus1},0}kl1]]+@{wpnBonus1}+@{attackbonus}+@{wpnDS1}]] | [[@{wpnDmg1}+@{wpnDS1}]] \n
+    Shock: [[@{wpnshock1}+@{wpnDS1}]] vs AC of @{shockAC1}"></td></tr>
+    
+    <tr><td style="border:2px solid;"><input  name="attr_weaponName2" type="text" class="sheet-wide"/></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnDmg2" class="sheet-narrow" /></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus2">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS2">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnshock2"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC2"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName2}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus2},0}kl1]]+@{wpnBonus2}+@{attackbonus}+@{wpnDS2}]] | [[@{wpnDmg2}+@{wpnDS2}]] \n
+    Shock: [[@{wpnshock2}+@{wpnDS2}]] vs AC of @{shockAC2}"></td></tr>
+    
+    <tr><td style="border:2px solid;"><input  name="attr_weaponName3" type="text" class="sheet-wide"/></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnDmg3" class="sheet-narrow" /></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus3">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS3">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnshock3"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC3"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName3}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus3},0}kl1]]+@{wpnBonus3}+@{attackbonus}+@{wpnDS3}]] | [[@{wpnDmg3}+@{wpnDS3}]] \n
+    Shock: [[@{wpnshock3}+@{wpnDS3}]] vs AC of @{shockAC3}"></td></tr>
+    
+    <tr><td style="border:2px solid;"><input  name="attr_weaponName4" type="text" class="sheet-wide"/></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnDmg4" class="sheet-narrow" /></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus4">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS4">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnshock4"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC4"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName4}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus4},0}kl1]]+@{wpnBonus4}+@{attackbonus}+@{wpnDS4}]] | [[@{wpnDmg4}+@{wpnDS4}]] \n
+    Shock: [[@{wpnshock4}+@{wpnDS4}]] vs AC of @{shockAC4}"></td></tr>
+    
+    <tr><td style="border:2px solid;"><input  name="attr_weaponName5" type="text" class="sheet-wide"/></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnDmg5" class="sheet-narrow" /></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus5">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS5">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td  style="border:2px solid;"><input type="text" name="attr_wpnshock5"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC5"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName5}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus5},0}kl1]]+@{wpnBonus5}+@{attackbonus}+@{wpnDS5}]] | [[@{wpnDmg5}+@{wpnDS5}]] \n
+    Shock: [[@{wpnshock5}+@{wpnDS5}]] vs AC of @{shockAC5}"></td></tr>
+    
+    <tr><td style="border:2px solid;"><input  name="attr_weaponName6" type="text" class="sheet-wide"/></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnDmg6" class="sheet-narrow" /></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnBonus6">
+        <option value="[[@{smiteLevel}]]">Smite</option>
+        <option value="[[@{spearLevel}]]">Spear</option>
+        <option value="[[@{shootLevel}]]">Shoot</option></select></td>
+    <td style="border:2px solid;"><select class="sheet-narrow" name="attr_wpnDS6">
+        <option value="[[@{strength_mod}]]">STR</option>
+        <option value="[[@{dexterity_mod}]]">DEX</option>
+        </select></td>
+    <td style="border:2px solid;"><input type="text" name="attr_wpnshock6"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;">vs AC<input type="text" name="attr_shockAC6"class="sheet-verynarrow"></input></td>
+    <td style="border:2px solid;"><button type="roll" value="
+    /em attacks with @{weaponName6}!\n
+    Attacking\n To Hit Roll | Damage \n
+    --------- [[1d20+[[{@{wpnBonus6},0}kl1]]+@{wpnBonus6}+@{attackbonus}+@{wpnDS6}]] | [[@{wpnDmg6}+@{wpnDS6}]] \n
+    Shock: [[@{wpnshock6}+@{wpnDS6}]] vs AC of @{shockAC6}"></td></tr>
+    </table>
+    
+    
+    
+<table style="width:100%">
+<tr>
+    <td>
+        <table>
+            <tr>
+                <td colspan=2><h2>Foci</h2></td>
+            </tr>
+            
+            <tr><td colspan=2>Focus Primus</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci1" style="width:400px;height:70px"></textarea></td></tr>
+            <tr><td colspan=2>Focus Secundus</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci2" style="width:400px;height:70px"></textarea></td></tr>
+            <tr><td colspan=2>Focus Tertius</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci3" style="width:400px;height:70px"></textarea></td></tr>
+            <tr><td colspan=2>Focus Quartus</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci4" style="width:400px;height:70px"></textarea></td></tr>
+            <tr><td colspan=2>Focus Quintus</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci5" style="width:400px;height:70px"></textarea></td></tr>
+            <tr><td colspan=2>Focus Ternus</td></tr>
+            <tr><td colspan=2><textarea name="attr_foci6" style="width:400px;height:70px"></textarea></td></tr>
+            
+            
+            
+            
+        </table>
+        
+        
+        
+    </td>
+    <td valign=top>
+        <table >
+            <tr><td>Combat Speed</td> <td><input style="width: 80px;font-size:17px"type="number" value=30 name="attr_speed"/></td></tr>
+            <tr><td colspan=2><h2>Items</h2></td></tr>
+            <tr><td ><h3>Readied</h3></td><td><h3>Stowed</h3></td></tr>
+            <tr><td><textarea name="attr_readied" style="width:190px;height:150px"></textarea></td>
+            <td><textarea name="attr_stowed" style="width:190px;height:150px"></textarea></td></tr>
+            
+            <tr><td colspan=2 ><h3>Wealth</h3></td></tr>
+            <tr>
+                <td colspan=2><textarea name="attr_wealth" style="width:401px;height:120px"></textarea></td>
+            </tr>
+            <tr><td colspan=2><h3>Splendor</h3></td></tr>
+            <tr>
+                <td colspan=2><textarea name="attr_splendor" style="width:390px;height:120px"></textarea></td>
+            </tr>
+            <tr><td colspan=2><h3>Scars</h3></td></tr>
+            <tr>
+                <td colspan=2><textarea name="attr_scars" style="width:390px;height:120px"></textarea></td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </table>
+        
+        
+        
+        
+        
+        
+        
+        
+    </td>
+    
+    
+    
+    
+    
+</tr>    
+    
+    
+    
+</table>    
+    
+<table style="text-align:center;width:99%;font-size:12px">
+    <tr><td colspan=8 style="text-align:center;"><h2>Power Not of Men</h2></td></tr>
+    <tr><td colspan=4 style="width:50%"><h2>Spells</h2></td>
+    <td colspan=4><h2>Miracles</h2></td>
+    </tr>
+    <tr>
+    <td colspan=4 ><h3>Sorcery Score</h3><input style="text-align:center;font-size:20px" type="number" value="0" name="attr_sorc"></td>
+    <td colspan=4 ><h3>Holiness Score</h3><input style="text-align:center;font-size:20px" type="number" value="0" name="attr_holy"></td>
+    </tr>
+    <tr><td style="width:15%">Spell</td><td>Effect</td><td style="width:6%">Time</td><td style="width:5%">Cost</td>
+    <td style="width:15%">Miracle</td><td>Effect</td><td style="width:6%">Time</td><td style="width:5%">Cost</td></tr>
+    
+    <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName0"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect0"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime0"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost0"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName0"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect0"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime0"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost0"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName1"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect1"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime1"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost1"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName1"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect1"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime1"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost1"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName2"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect2"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime2"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost2"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName2"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect2"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime2"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost2"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName3"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect3"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime3"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost3"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName3"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect3"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime3"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost3"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName4"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect4"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime4"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost4"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName4"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect4"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime4"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost4"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName5"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect5"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime5"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost5"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName5"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect5"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime5"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost5"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName6"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect6"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime6"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost6"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName6"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect6"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime6"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost6"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName7"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect7"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime7"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost7"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName7"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect7"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime7"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost7"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName8"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect8"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime8"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost8"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName8"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect8"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime8"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost8"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName9"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect9"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime9"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost9"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName9"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect9"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime9"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost9"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName10"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect10"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime10"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost10"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName10"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect10"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime10"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost10"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName11"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect11"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime11"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost11"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName11"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect11"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime11"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost11"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName12"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect12"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime12"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost12"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName12"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect12"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime12"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost12"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName13"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect13"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime13"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost13"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName13"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect13"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime13"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost13"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName14"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect14"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime14"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost14"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName14"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect14"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime14"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost14"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName15"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect15"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime15"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost15"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName15"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect15"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime15"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost15"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName16"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect16"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime16"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost16"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName16"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect16"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime16"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost16"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName17"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect17"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime17"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost17"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName17"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect17"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime17"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost17"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName18"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect18"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime18"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost18"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName18"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect18"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime18"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost18"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName19"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect19"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime19"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost19"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName19"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect19"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime19"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost19"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName20"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect20"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime20"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost20"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName20"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect20"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime20"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost20"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName21"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect21"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime21"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost21"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName21"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect21"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime21"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost21"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName22"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect22"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime22"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost22"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName22"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect22"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime22"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost22"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName23"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect23"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime23"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost23"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName23"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect23"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime23"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost23"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName24"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect24"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime24"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost24"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName24"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect24"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime24"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost24"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName25"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect25"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime25"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost25"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName25"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect25"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime25"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost25"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName26"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect26"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime26"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost26"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName26"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect26"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime26"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost26"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName27"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect27"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime27"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost27"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName27"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect27"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime27"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost27"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName28"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect28"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime28"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost28"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName28"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect28"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime28"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost28"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName29"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect29"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime29"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost29"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName29"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect29"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime29"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost29"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName30"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect30"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime30"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost30"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName30"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect30"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime30"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost30"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName31"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect31"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime31"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost31"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName31"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect31"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime31"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost31"/></td></tr>
+ <tr><td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_sName32"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_sEffect32"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_sTime32"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_sCost32"/></td>
+    <td style="width:15%"><input style="font-size:14px;width:100%"type="text" name="attr_mName32"/></td>
+    <td><input style="font-size:14px;width:100%"type="text" name="attr_mEffect32"/></td>
+    <td style="width:6%"><input style="font-size:14px;width:100%"type="text" name="attr_mTime32"/></td>
+    <td style="width:5%"><input style="font-size:14px;width:100%"type="text" name="attr_mCost32"/></td></tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>    
+    <div style="text-align:center;border:2px solid;width:99%"><h2>Additional Assets</h2>
+    <div class="grow notes"><textarea name="attr_assets" style="border:2px solid;width:98%;height:300px"></textarea></div>
+    </div>
+    </div>
+    
+<br>
+<div style="text-align:center;border:2px solid;width:99%x"><h2>Notes</h2>
+<div class="grow notes "><textarea name="attr_notes" style="border:2px solid;width:98%;height:500px"></textarea></div>
+</div>
+</div>
+
+    
